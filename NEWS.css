@@ -1,0 +1,645 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; /* Smooth transition for all links */
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    background-image: url('bibir.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    backdrop-filter: blur(8px);
+    opacity: 95%;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+section nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: pink;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition for nav bar */
+}
+
+section nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+    transition: transform 0.3s ease-in-out; /* Smooth logo scaling */
+}
+
+section nav .logo img:hover {
+    transform: scale(1.1); /* Enlarge logo when hovered */
+}
+
+section nav ul {
+    list-style: none;
+}
+
+section nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a {
+    text-decoration: none;
+    color: rgb(128, 0, 38);
+    font-weight: 500;
+    font-size: 17px;
+    transition: color 0.3s ease-in-out; /* Smooth color change */
+}
+
+section nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: blueviolet;
+    display: block;
+    transition: width 0.3s ease-in-out; /* Smooth underline */
+}
+
+section nav ul li a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+section nav ul li a:hover {
+    color: deeppink;
+}
+
+section nav .icon i {
+    font-size: 18px;
+    color: black;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth color and scaling */
+}
+
+section nav .icon i:hover {
+    color: deeppink;
+    transform: scale(1.2); /* Enlarge icons on hover */
+}
+
+/* Blog Section */
+#blog {
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.blog-heading span {
+    color: rgb(202, 0, 192);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.blog-heading h3 {
+    font-size: 80px;
+    color: crimson;
+    font-weight: 600;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+    width: 220px;
+    height: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    position:relative;
+    float: left;
+    margin-left: 12%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+.blog-container:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Increase shadow */
+}
+
+.blog-img img {
+    object-fit: contain;
+    object-position: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out; /* Smooth image zoom */
+}
+
+.blog-container:hover .blog-img img {
+    transform: scale(1.1); /* Zoom image on hover */
+}
+
+.blog-text {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span {
+    color: rgb(211, 0, 112);
+    font-size: 15px;
+}
+
+.blog-text .blog-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: darkmagenta;
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.blog-text .blog-title:hover {
+    color: aquamarine;
+    transition: all ease 0.3s;
+}
+
+.blog-text p {
+    color: rgb(63, 0, 31);
+    font-size: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 5px 0px;
+}
+
+.blog-text a {
+    color: rgb(180, 0, 90);
+}
+
+.blog-text a:hover {
+    color: aquamarine;
+    transition: all ease 0.3s;
+}
+
+/* Footer */
+footer {
+    box-sizing: border-box;
+    background-color: crimson;
+    margin-bottom: 0px;
+}
+
+.footerCon {
+    width: 100%;
+    padding: 0px 0px 0px;
+}
+
+.medsos {
+    display: flex;
+    justify-content: center;
+}
+
+.medsos a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth scaling and color */
+}
+
+.medsos a:hover {
+    background-color: deeppink;
+    transform: scale(1.2); /* Enlarge icon on hover */
+}
+
+.medsos a i {
+    font-size: 33px;
+    color: black;
+    opacity: 0.9;
+}
+
+.footer_nav {
+    margin: 10px 0;
+}
+
+.footer_nav ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer_nav ul li a {
+    color: rgb(156, 0, 65);
+    margin: 100px;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.7;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth color and opacity */
+}
+
+.footer_nav ul li a:hover {
+    opacity: 1;
+    color: blueviolet;
+    text-shadow: 10%;
+    font-size: larger;
+    font-style: italic;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer_bottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer_bottom p {
+    color: white;
+}
+
+.footer_bottom p span {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+    color: deeppink;
+    font-style: italic;
+}
+
+/* Tambahkan ini di bagian atas CSS yang ada */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Geser sedikit ke bawah */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Kembali ke posisi semula */
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Geser dari kiri */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Kembali ke posisi semula */
+    }
+}
+
+/* Terapkan efek fade-in untuk body */
+body {
+    animation: fadeIn 0.5s ease-out; /* Tambahkan animasi fade-in ke body */
+}
+
+/* Terapkan efek slide-in untuk elemen yang diinginkan */
+.blog-heading {
+    animation: slideIn 0.7s ease-out; /* Animasi untuk judul blog */
+}
+
+.blog-container {
+    animation: fadeIn 0.8s ease-out; /* Animasi untuk setiap blog card */
+}
+
+/* Terapkan animasi masuk pada footer */
+.footerCon {
+    animation: fadeIn 0.6s ease-out; /* Animasi untuk footer */
+}
+
+
+
+/**yang lain**/
+
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    color: crimson;
+}
+
+.container {
+    background-color: pink;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.center-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.learn-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff00b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.learn-more-btn:hover {
+    background-color: #0056b3;
+    margin-top: 10px;
+}
+
+
+.event-section {
+    padding: 20px;
+}
+
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    height: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    animation: slideIn 1s ease-out;
+}
+
+.event-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.event-info {
+    text-align: center;
+    padding: 15px;
+    background-color: #ff6f91;
+    color: white;
+}
+
+.event-info h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.uniform-section {
+    padding: 20px;
+}
+
+.uniform-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.uniform-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    height: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease-in-out;
+    position: relative;
+    animation: slideIn 1.5s ease-out;
+    cursor: pointer;
+}
+
+.uniform-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.uniform-info {
+    text-align: center;
+    padding: 15px;
+    background-color: #f3219c;
+    color: white;
+}
+
+.uniform-info h2 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/* Hover Sliding Effect */
+.uniform-card:hover {
+    transform: translateX(20px); /* Slide card to the right */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.uniform-card:hover img {
+    transform: scale(1.1); /* Slight zoom on image */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+/**SCHOOL LIFE**/
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.video-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.suggestion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+}
+
+.bubble {
+    position: relative;
+    padding: 20px;
+    background-color: #ffe0f0;
+    border-radius: 30px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 20px;
+    border-style: solid;
+    border-color: #ffe0f0 transparent transparent transparent;
+}
+
+.bubble h2 {
+    text-align: center;
+    color: #d81b60;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 16px;
+    outline: none;
+    resize: none;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+textarea::placeholder {
+    font-style: italic;
+    color: #888;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #c2185b;
+}

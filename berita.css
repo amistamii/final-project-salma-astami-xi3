@@ -1,0 +1,278 @@
+/* Reset and general styling */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; /* Smooth transition for all links */
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    background-image: url('bibir.jpg'); /* Background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    backdrop-filter: blur(8px);
+    opacity: 95%;
+    animation: fadeIn 0.5s ease-out; /* Add fade-in effect for body */
+}
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+section nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    right: 0;
+    left: 0;
+    background: pink;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition for nav bar */
+}
+
+section nav .logo img {
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+    transition: transform 0.3s ease-in-out; /* Smooth logo scaling */
+}
+
+section nav .logo img:hover {
+    transform: scale(1.1); /* Enlarge logo when hovered */
+}
+
+section nav ul {
+    list-style: none;
+}
+
+section nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a {
+    text-decoration: none;
+    color: rgb(128, 0, 38);
+    font-weight: 500;
+    font-size: 17px;
+    transition: color 0.3s ease-in-out; /* Smooth color change */
+}
+
+section nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: blueviolet;
+    display: block;
+    transition: width 0.3s ease-in-out; /* Smooth underline */
+}
+
+section nav ul li a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+section nav ul li a:hover {
+    color: deeppink;
+}
+
+section nav .icon i {
+    font-size: 18px;
+    color: black;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth color and scaling */
+}
+
+section nav .icon i:hover {
+    color: deeppink;
+    transform: scale(1.2); /* Enlarge icons on hover */
+}
+
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-top: 50px;
+    animation: slideIn 0.7s ease-out; /* Add slide-in animation for the header */
+}
+
+header .title {
+    font-size: 36px;
+    color: #880e4f;
+    margin-bottom: 10px;
+}
+
+header .subtitle {
+    font-size: 18px;
+    color: #4a148c;
+}
+
+/* Image section */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    animation: fadeIn 1.2s ease-out; /* Add fade-in animation for the image */
+}
+
+.featured-image {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Content section */
+.content {
+    padding: 0 20px;
+    text-align: center;
+    max-width: 800px;
+    animation: slideUp 1.5s ease-out; /* Add slide-up animation for the content */
+}
+
+.content p {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #4a148c;
+}
+
+/* Footer styling */
+footer {
+    background-color: crimson;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footerCon {
+    width: 100%;
+    padding: 0px 0px 0px;
+    animation: fadeIn 0.6s ease-out; /* Add fade-in effect for footer */
+}
+
+.medsos {
+    display: flex;
+    justify-content: center;
+}
+
+.medsos a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth scaling and color */
+}
+
+.medsos a:hover {
+    background-color: deeppink;
+    transform: scale(1.2); /* Enlarge icon on hover */
+}
+
+.medsos a i {
+    font-size: 33px;
+    color: black;
+    opacity: 0.9;
+}
+
+.footer_nav {
+    margin: 10px 0;
+}
+
+.footer_nav ul {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer_nav ul li a {
+    color: rgb(156, 0, 65);
+    margin: 100px;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.7;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth color and opacity */
+}
+
+.footer_nav ul li a:hover {
+    opacity: 1;
+    color: blueviolet;
+    text-shadow: 10%;
+    font-size: larger;
+    font-style: italic;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer_bottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer_bottom p {
+    color: white;
+}
+
+.footer_bottom p span {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+    color: deeppink;
+    font-style: italic;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
